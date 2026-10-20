@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study 3 - Blog Application - 2600308</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{background:#f8f9fa}
+.hero{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:40px;text-align:center}
+.card{transition:0.3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.15)}
+.error{color:red;font-size:13px;display:none}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>📝 My Blog - Bhavana's Thoughts</h1>
+<p>Case Study 3: Blog Application - Dynamic Content & Form Validation | ID: 2600308</p>
+</div>
+
+<div class="container my-4">
+<div class="row">
+<!-- Blog Posts - Dynamic Content -->
+<div class="col-md-8" id="blogContainer">
+<h3 class="mb-3">Latest Blogs</h3>
+</div>
+
+<!-- Add Blog Form - Form Validation -->
+<div class="col-md-4">
+<div class="card p-3 shadow">
+<h4>Add New Blog</h4>
+<form id="blogForm" onsubmit="return validateAndAdd()">
+<input type="text" id="title" class="form-control mb-2" placeholder="Blog Title">
+<p id="titleError" class="error">Title is required (min 5 chars)</p>
+
+<textarea id="content" class="form-control mb-2" rows="4" placeholder="Blog Content"></textarea>
+<p id="contentError" class="error">Content is required (min 20 chars)</p>
+
+<input type="text" id="author" class="form-control mb-2" placeholder="Author Name" value="Bhavana Sri">
+<p id="authorError" class="error">Author name required</p>
+
+<button type="submit" class="btn btn-primary w-100">Publish Blog</button>
+</form>
+</div>
+
+<div class="card p-3 mt-3 shadow">
+<h5>Author</h5>
+<p><b>Bhavana Sri - 2600308</b><br>KL University, Vijayawada<br>Web Development - Case Study 3</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+// Initial Blogs - Dynamic Data
+let blogs = [
+{title:"My E-Commerce Journey - Case 1", content:"I built an online shopping website using HTML, CSS, JavaScript with responsive design. It was amazing experience!", author:"Bhavana Sri", date:"Oct 18, 2026"},
+{title:"Designing My Portfolio - Case 2", content:"Created portfolio with interactive UI using Bootstrap. Showcased my skills, projects and achievements.", author:"Bhavana Sri", date:"Oct 19, 2026"},
+{title:"Why Blogging Matters?", content:"Blog Application helps share knowledge. This Case Study 3 implements dynamic content rendering using JavaScript.", author:"Bhavana Sri", date:"Oct 20, 2026"}
+];
+
+function displayBlogs(){
+let container = document.getElementById("blogContainer");
+container.innerHTML = "<h3 class='mb-3'>Latest Blogs</h3>";
+blogs.forEach((blog, index)=>{
+container.innerHTML += `
+<div class="card mb-3 shadow-sm">
+<div class="card-body">
+<h5>${blog.title}</h5>
+<p class="text-muted small">${blog.author} | ${blog.date}</p>
+<p>${blog.content}</p>
+<button class="btn btn-sm btn-outline-danger" onclick="deleteBlog(${index})">Delete</button>
+</div>
+</div>
+`;
+});
+}
+
+function validateAndAdd(){
+let title = document.getElementById("title").value.trim();
+let content = document.getElementById("content").value.trim();
+let author = document.getElementById("author").value.trim();
+let valid = true;
+
+// Reset errors
+document.getElementById("titleError").style.display="none";
+document.getElementById("contentError").style.display="none";
+document.getElementById("authorError").style.display="none";
+
+if(title.length < 5){
+document.getElementById("titleError").style.display="block";
+valid=false;
+}
+if(content.length < 20){
+document.getElementById("contentError").style.display="block";
+valid=false;
+}
+if(author.length < 2){
+document.getElementById("authorError").style.display="block";
+valid=false;
+}
+
+if(!valid) return false;
+
+// Add Blog - Dynamic Content
+blogs.unshift({title, content, author, date: new Date().toLocaleDateString()});
+displayBlogs();
+document.getElementById("blogForm").reset();
+alert("Blog Published Successfully!");
+return false;
+}
+
+function deleteBlog(i){
+blogs.splice(i,1);
+displayBlogs();
+}
+
+displayBlogs();
+</script>
+</body>
+</html>
