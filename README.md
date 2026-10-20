@@ -24,4 +24,4 @@ Student: Bhavana Sri - 2600308
 🚀 Blog: https://bhavanasri23.github.io/WD-Activity-Based-Learning0/Case-Study-3%20index%20.html
 ## 👩‍💻 Author
 Bhavana Sri - 2600308
-KL University, Vijayawada
+NRI UNIVERSITY, Vijayawada
