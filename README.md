@@ -1,6 +1,6 @@
 # WD-Activity-Based-Learning
 Web Development Activity Based Learning - 3 Case Studies
-Student: Bhavana Sri - 2600308 | Dr. RVR NRI Institute of Technology, Vijayawada | CSE - A
+Student: Bhavana Sri - 2600308 | Dr. RVR NRI Institute of Technology, Vijayawada | CSE - 5
 
 ## 📁 Case Studies
 
