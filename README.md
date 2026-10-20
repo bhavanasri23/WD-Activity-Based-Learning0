@@ -16,7 +16,7 @@ Student: Bhavana Sri - 2600308 | Dr. RVR NRI Institute of Technology, Vijayawada
 - Dynamic Content
 - Form Validation
 - 
-## 🚀 Live De
+## 🚀 Live Demo links
 🚀 E-Commerce: https://bhavanasri23.github.io/WD-Activity-Based-Learning0/Case-Study-1%20index%20.html
 
 🚀 Portfolio: https://bhavanasri23.github.io/WD-Activity-Based-Learning0/Case-Study-2%20index.html
