@@ -15,10 +15,13 @@ Student: Bhavana Sri - 2600308
 ### Case Study 3: Blog Application
 - Dynamic Content
 - Form Validation
+- 
+## 🚀 Live De
+🚀 E-Commerce: https://bhavanasri23.github.io/WD-Activity-Based-Learning0/Case-Study-1%20index%20.html
 
-## 🚀 Live Demo
-Will be added soon
+🚀 Portfolio: https://bhavanasri23.github.io/WD-Activity-Based-Learning0/Case-Study-2%20index.html
 
+🚀 Blog: https://bhavanasri23.github.io/WD-Activity-Based-Learning0/Case-Study-3%20index%20.html
 ## 👩‍💻 Author
 Bhavana Sri - 2600308
 KL University, Vijayawada
